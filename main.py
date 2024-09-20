@@ -53,7 +53,7 @@ print(count_vowels('independence'))
 
 # **Restrictions**: You may not use the `sorted()` or `sort()` Python built-in functions, `list.extend()`, or list concatenation (`+`) to solve this question.
 
-def merge_sorted_lists(list1, list2):
+def merge_lists(list1, list2):
     merged_list = []
     a, b = 0, 0
 
@@ -78,7 +78,7 @@ def merge_sorted_lists(list1, list2):
 list1 = [1, 3, 5, 7]
 list2 = [2, 4, 6, 8]
 
-result = merge_sorted_lists(list1, list2)
+result = merge_lists(list1, list2)
 print(result)
 
 # ### 3. Function: `word_lengths`
@@ -118,7 +118,7 @@ print(reverse_string(strng))
 
 # **Restrictions**: Do not use list comprehensions.
 
-def intersect_lists(colors1, colors2):
+def intersection(colors1, colors2):
     intersection = []
     
     for color1 in colors1:
@@ -129,7 +129,7 @@ def intersect_lists(colors1, colors2):
 colors1 = {'y', 'e', 'l', 'l', 'o', 'w'}
 colors2 = {'b', 'l', 'u', 'e'}
 
-print(intersect_lists(colors1, colors2))
+print(intersection(colors1, colors2))
 
 # Importing sys for test function
 import sys
@@ -142,20 +142,6 @@ def test(did_pass):
     msg = f"Test at line {linenum} {'PASSED' if did_pass else 'FAILED'}."
     print(msg)
 
-
-# Function 1: count_vowels
-def count_vowels(s: str) -> int:
-    """
-    Count the number of vowels in a string.
-
-    Parameters:
-    - s (str): The input string
-
-    Returns:
-    - int: The number of vowels in the string
-    """
-    # TODO: Implement this function
-    pass
 
 
 # Unit Tests for count_vowels
@@ -170,22 +156,6 @@ def test_count_vowels():
     test(count_vowels("aEiOu") == 5)
     test(count_vowels("a e i o u") == 5)
     test(count_vowels("rhythm") == 0)
-
-
-# Function 2: merge_lists
-def merge_lists(list1: list, list2: list) -> list:
-    """
-    Merge two sorted lists into a single sorted list.
-
-    Parameters:
-    - list1 (list): The first sorted list
-    - list2 (list): The second sorted list
-
-    Returns:
-    - list: A new sorted list containing all elements from list1 and list2
-    """
-    # TODO: Implement this function
-    pass
 
 
 # Unit Tests for merge_lists
@@ -204,21 +174,6 @@ def test_merge_lists():
     test(merge_lists([1, 1, 2, 3], [1, 2, 2, 3]) == [1, 1, 1, 2, 2, 2, 3, 3])
 
 
-# Function 3: word_lengths
-def word_lengths(words: list) -> list:
-    """
-    Get the lengths of words in a list.
-
-    Parameters:
-    - words (list): The list of words
-
-    Returns:
-    - list: A list containing the lengths of the words
-    """
-    # TODO: Implement this function
-    pass
-
-
 # Unit Tests for word_lengths
 def test_word_lengths():
     words = ["hello", "world", "python"]
@@ -229,21 +184,6 @@ def test_word_lengths():
     test(word_lengths(["short", "mediummm", "longesttttt"]) == [5, 8, 11])
     test(word_lengths(["", "a", "ab", "abc"]) == [0, 1, 2, 3])
     test(word_lengths(["  ", "a b", " c "]) == [2, 3, 3])
-
-
-# Function 4: reverse_string
-def reverse_string(s: str) -> str:
-    """
-    Reverse a string.
-
-    Parameters:
-    - s (str): The input string
-
-    Returns:
-    - str: The reversed string
-    """
-    # TODO: Implement this function
-    pass
 
 
 # Unit Tests for reverse_string
@@ -257,22 +197,6 @@ def test_reverse_string():
     test(reverse_string("Hello, World!") == "!dlroW ,olleH")
     test(reverse_string("12345") == "54321")
     test(reverse_string("  spaces  ") == "  secaps  ")
-
-
-# Function 5: intersection
-def intersection(list1: list, list2: list) -> list:
-    """
-    Find the intersection of two lists.
-
-    Parameters:
-    - list1 (list): The first list
-    - list2 (list): The second list
-
-    Returns:
-    - list: The intersection of the two lists
-    """
-    # TODO: Implement this function
-    pass
 
 
 # Unit Tests for intersection
